@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    Mobilia
+  </title>
+  <link rel="stylesheet" type="text/css" href="static/carousel.css">
+
+</head>
+
+<body>
+  <form method="POST">
+    <h2>Móvel</h2>
+    <input type="text" name="peso" placeholder="peso do móvel" />
+    <input type="text" name="largura" placeholder="largura do móvel" />
+    <input type="text" name="profundidade" placeholder="profundidade do móvel" />
+    <input type="text" name="comprimento" placeholder="comprimento do móvel" />
+
+    <input type="submit" value="Submit" />
+  </form>
+  {% if solution != None %}
+  <div class="thumbnail-container">
+    {% for item in solution %}
+    <div class="thumbnail-item">
+      <img src="{{ item }}" alt="Thumbnail">
+    </div>
+    {% if loop.index % 5 == 0 %} <!-- Adicione uma quebra de linha a cada 5 miniaturas -->
+    <div class="clearfix"></div>
+    {% endif %}
+    {% endfor %}
+  </div>
+  {% endif %}
+</body>
+
+</body>
+
+</html>

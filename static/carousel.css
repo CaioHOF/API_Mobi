@@ -1,0 +1,21 @@
+    /* Estilos para as miniaturas */
+    .thumbnail-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .thumbnail-item {
+      width: calc(20% - 10px); /* 20% de largura com 10px de margem entre as miniaturas */
+      margin-bottom: 10px;
+    }
+
+    .thumbnail-item img {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Clearfix para quebras de linha */
+    .clearfix {
+      clear: both;
+    }
